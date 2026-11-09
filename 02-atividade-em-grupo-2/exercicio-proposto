@@ -1,0 +1,22 @@
+# Pequisar sobre os protocolos de rede
+
+Existem variados protocolos para executar distintas tarefas na rede, como para enviar e receber arquivos (FTP), testar a conectividade de rede (ICMP) e acessar a internet para enviar e receber informações. É uma sucessão de protocolos, como:
+
+- 1. dARP;
+- 2. HTTP;
+- 3. FTP;
+- 4. TCP;
+- 5. ICMP;
+- 6. IP;
+- 7. SMTP;
+- 8. Telnet;
+- 9. UDP;
+- 10. NNTP;
+
+Objetivo: Criar uma apresentação, para cada protocolo de conter 5 slides
+
+- Slide 1 — Identificação: Nome do protocolo, sigla por extenso e função principal.
+- Slide 2 — Analogia: Comparação com uma situação do cotidiano e explicação do motivo da comparação. 
+- Slide 3 — Ilustração: Desenho, fluxograma ou esquema criado pelo próprio grupo.
+- Slide 4 — Exemplo real: Onde o protocolo aparece e como participa da comunicação entre computadores.
+- Slide 5 — Relação com outros protocolos: Mostrar pelo menos um protocolo relacionado e explicar a relação entre eles.

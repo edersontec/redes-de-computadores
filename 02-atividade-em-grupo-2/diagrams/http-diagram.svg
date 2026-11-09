@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 380" width="100%" height="100%" style="background:#f8fafc; font-family:system-ui, -apple-system, sans-serif; border-radius:12px; border:1px solid #cbd5e1;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="940" height="46" fill="#1e3a8a" rx="12" />
+  <rect x="0" y="30" width="940" height="16" fill="#1e3a8a" />
+  <text x="24" y="28" fill="#ffffff" font-size="16" font-weight="700" letter-spacing="0.5">Ciclo de Requisição e Resposta do HTTP (HyperText Transfer Protocol)</text>
+
+  <g transform="translate(0, 46)">
+    
+    <!-- Cliente (Navegador) -->
+    <g transform="translate(60, 40)" filter="url(#shadow)">
+      <rect width="210" height="185" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2" />
+      <rect width="210" height="32" rx="8" fill="#2563eb" />
+      <rect y="24" width="210" height="8" fill="#2563eb" />
+      <text x="105" y="22" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Cliente (Browser / App)</text>
+      <text x="16" y="58" fill="#0f172a" font-size="11" font-weight="600">IP: 200.18.1.5</text>
+      <text x="16" y="78" fill="#64748b" font-size="11">Usuário digita URL</text>
+      <text x="16" y="98" fill="#2563eb" font-size="11">1. Envia Requisição HTTP</text>
+      <text x="16" y="122" fill="#64748b" font-size="11">2. Aguarda Resposta</text>
+      <text x="16" y="145" fill="#059669" font-size="11">3. Renderiza HTML/CSS/JS</text>
+      <text x="16" y="168" fill="#475569" font-size="11">4. Executa scripts e DOM</text>
+    </g>
+
+    <!-- Nuvem / Internet -->
+    <g transform="translate(370, 85)">
+      <ellipse cx="95" cy="50" rx="85" ry="45" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4" />
+      <text x="95" y="46" fill="#475569" font-size="12" font-weight="700" text-anchor="middle">Rede TCP/IP</text>
+      <text x="95" y="64" fill="#64748b" font-size="11" text-anchor="middle">Porta TCP 80 / 443</text>
+    </g>
+
+    <!-- Servidor Web -->
+    <g transform="translate(660, 40)" filter="url(#shadow)">
+      <rect width="220" height="185" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2" />
+      <rect width="220" height="32" rx="8" fill="#059669" />
+      <rect y="24" width="220" height="8" fill="#059669" />
+      <text x="110" y="22" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Servidor Web (Nginx / Apache)</text>
+      <text x="16" y="58" fill="#0f172a" font-size="11" font-weight="600">IP: 142.250.190.46</text>
+      <text x="16" y="78" fill="#64748b" font-size="11">Porta 80 (HTTP) / 443 (HTTPS)</text>
+      <text x="16" y="102" fill="#0f172a" font-size="11">1. Recebe método HTTP</text>
+      <text x="16" y="122" fill="#0f172a" font-size="11">2. Localiza arquivo/recurso</text>
+      <text x="16" y="145" fill="#059669" font-size="11">3. Gera resposta com status</text>
+      <text x="16" y="168" fill="#64748b" font-size="11">4. Retorna corpo da resposta</text>
+    </g>
+
+    <!-- Mensagem de Request (Ida) -->
+    <path d="M 270 70 L 660 70" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)" />
+    <rect x="340" y="25" width="260" height="36" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+    <text x="470" y="42" fill="#1e40af" font-size="11" font-weight="700" text-anchor="middle">HTTP Request: GET /index.html HTTP/1.1</text>
+    <text x="470" y="55" fill="#3b82f6" font-size="10" text-anchor="middle">Host: site.com | User-Agent: Chrome</text>
+
+    <!-- Mensagem de Response (Volta) -->
+    <path d="M 660 165 L 270 165" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow-green)" />
+    <rect x="340" y="175" width="260" height="36" rx="6" fill="#ecfdf5" stroke="#a7f3d0" />
+    <text x="470" y="191" fill="#065f46" font-size="11" font-weight="700" text-anchor="middle">HTTP Response: HTTP/1.1 200 OK</text>
+    <text x="470" y="204" fill="#047857" font-size="10" text-anchor="middle">Content-Type: text/html | &lt;html&gt;...&lt;/html&gt;</text>
+
+    <!-- Rodapé Explicativo -->
+    <rect x="40" y="250" width="850" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" />
+    <text x="60" y="272" fill="#1e3a8a" font-size="12" font-weight="700">Natureza do Protocolo:</text>
+    <text x="60" y="292" fill="#334155" font-size="11">O HTTP é stateless (sem estado nativo): cada requisição é independente. Para guardar autenticação e sessões, usam-se Cookies e Tokens JWT.</text>
+
+  </g>
+</svg>
